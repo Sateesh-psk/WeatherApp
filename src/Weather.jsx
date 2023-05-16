@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import Temper from "./Temperature";
-import Region from "./Region";
 import image from "./original.jpeg"
 import Condition from "./Condition";
 import AirQuality from "./AirQuality";
-import AirQualityIndex from "./AirQualityIndex";
 import Hour from "./HourForecast";
 import UV from "./UV";
-import Latitude from "./Latitude";
 import CityDetails from "./CityDetails";
 
 import Astro from "./astro";
 function Input({data}){
-    const [temp,setTemp]=useState();
     const weather=data;
     const {current,location,forecast}=data;
     const today=forecast.forecastday[0];
