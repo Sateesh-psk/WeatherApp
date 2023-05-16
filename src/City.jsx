@@ -3,7 +3,7 @@ import DataServer from "./DataServer";
 import "./index.css"
 function City(){
     const [city,setCity]=useState("")
-    const [submitted,setSubmitted]=useState(false)
+    const [submitted,setSubmitted]=useState(0)
     const image={
         width: "100%",
         height:'1040px',
@@ -28,7 +28,7 @@ function City(){
             <h1 id="title">Weather Forecasting</h1>
             <div className="page1">
                 <input type="text" className="citySearch" onChange={HandleCity} value={city} placeholder="Enter City Name" name="city" autocomplete="off"/>
-                <button type="submit" className="searchButton" onClick={()=>setSubmitted(true)}>Submit</button>
+                <button type="submit" className="searchButton" onClick={()=>setSubmitted(1)}>Submit</button>
             </div>
                 {submitted ? <DataServer city={city} /> : null}
         </div>
