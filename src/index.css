@@ -4,16 +4,23 @@ a {
   text-decoration: none;
 }
 body {
-  background-color: #FDFDFD;
   margin: 0;
   font-family:'Kumbh Sans', sans-serif;
-  font:lighter;
+  font:italic;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#title {
+  font:italic;
+  font-weight: lighter;
+  font-size:5em;
+  width:50%;
+  margin-left:2em;
+  color:white;
 }
 .anime {
   animation-duration: 1s;
@@ -26,16 +33,34 @@ code {
   border-radius: 1em 0 0 1em;
   border-color: #F7FBFC;
   border-right: 0;
+  opacity:75%;
   padding:0.65em;
   padding-left: 1em;
+  text-decoration: none;
   width:40%;
   font-size:1.2em;
+}
+.dayimage img{
+  width:1.5em;
 }
 .degree{
   margin-top: 0;
 }
+.hourCast {
+  background-color: #ffffff4a;
+  margin:0.138em;
+  /* border:solid 0.25em; */
+  border-radius:1em;
+  border-color: whitesmoke;
+  float:left;
+  padding:0.5em 0.25em;
+  text-align: center;
+}
+.hourCast:hover {
+  background-color:rgba(128, 128, 128, 0.174);
+}
 .page1 {
-  margin:300px auto;
+  margin:9em auto 17em 0;
   text-align: center;
 }
 .quality {
@@ -44,7 +69,7 @@ code {
   color:navy;
   float:right;
   height:26em;
-  margin:0.5em 1em 0 0;
+  margin:0.5em 1em 0.5em 0;
   padding:0 1em;
   text-align:center;
   width:29%;
@@ -53,7 +78,6 @@ code {
   border-radius: 1em;
   color:white;
   height:4.5em;
-  margin-top:0.75em;
   padding:0 1em;
   text-align:center;
 }
@@ -68,11 +92,37 @@ code {
   text-align:center;
   width:47.5%;
 }
+.lati {
+  background-color:#ffffff4a;
+  border-radius: 1em;
+  color:aliceblue;
+  float :left;
+  font:lighter;
+  height:8em;
+  margin:1em;
+  text-align:center;
+  width:22.6%;
+}
+.index {
+  background-color:#ffffff4a;
+  border-radius: 1em;
+  color:aliceblue;
+  float :left;
+  height:10em;
+  margin:0.5em;
+  padding:0 1em;
+  text-align:center;
+  width:40%;
+}
+.index h1{
+  color:navy;
+  margin-bottom:0;
+}
 .location:hover {
   color:navy;
 }
 .searchButton{
-  background-color:#4A69BB ;
+  background-color:rgba(0, 0, 128, 0.355) ;
   border:0;
   border-color: #F7FBFC;
   border-radius:0 1em 1em 0;
@@ -95,13 +145,13 @@ code {
 }
 .temper h1{
   color:navy;
-} 
+}
 .anime:hover {
   animation-name:bounce;
   animation-timing-function: ease;
 }
 @keyframes bounce {
 0%   { transform: translateY(0); }
-50%  { transform: translateY(-1em); }
+50%  { transform: translateY(-0.5em); }
 100% { transform: translateY(0); }
 }

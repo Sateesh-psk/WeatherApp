@@ -6,7 +6,6 @@ function Region(props){
         <div className="region">
             <h2>{props.area}</h2>
             <a className="location" href={key}><h1>{props.value}</h1></a>
-            
         </div>
     )
 }
