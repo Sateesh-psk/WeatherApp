@@ -1,13 +1,107 @@
+a {
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
 body {
+  background-color: #FDFDFD;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'Kumbh Sans', sans-serif;
+  font:lighter;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.anime {
+  animation-duration: 1s;
+  animation-iteration-count:1;
+  transform-origin: bottom;
+}
+.citySearch {
+  background-color:#DBE2EF ;
+  border:0;
+  border-radius: 1em 0 0 1em;
+  border-color: #F7FBFC;
+  border-right: 0;
+  padding:0.65em;
+  padding-left: 1em;
+  width:40%;
+  font-size:1.2em;
+}
+.degree{
+  margin-top: 0;
+}
+.page1 {
+  margin:300px auto;
+  text-align: center;
+}
+.quality {
+  background-color: #ffffff4a;
+  border-radius: 1em;
+  color:navy;
+  float:right;
+  height:26em;
+  margin:0.5em 1em 0 0;
+  padding:0 1em;
+  text-align:center;
+  width:29%;
+}
+.qualityCard {
+  border-radius: 1em;
+  color:white;
+  height:4.5em;
+  margin-top:0.75em;
+  padding:0 1em;
+  text-align:center;
+}
+.region {
+  background-color:#ffffff4a;
+  border-radius: 1em;
+  color:aliceblue;
+  float :left;
+  font:lighter;
+  height:8em;
+  margin:1em;
+  text-align:center;
+  width:47.5%;
+}
+.location:hover {
+  color:navy;
+}
+.searchButton{
+  background-color:#4A69BB ;
+  border:0;
+  border-color: #F7FBFC;
+  border-radius:0 1em 1em 0;
+  border-left-width: 0;
+  color:#F7FBFC;
+  font-size:1.2em;
+  padding:0.65em;
+  padding-right: 1em;
+}
+.temper {
+  background-color: #ffffff4a;
+  border-radius: 1em;
+  color:aliceblue;
+  float:left;
+  height:8em;
+  margin:0.5em;
+  padding:0 1em;
+  text-align:center;
+  width:29.7%;
+}
+.temper h1{
+  color:navy;
+} 
+.anime:hover {
+  animation-name:bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+0%   { transform: translateY(0); }
+50%  { transform: translateY(-1em); }
+100% { transform: translateY(0); }
 }
