@@ -15,6 +15,7 @@ function City(){
         setCity(event.target.value);
     }
     function SubmitHandle(){
+        
         return (
             <div>
                 {console.log(city)}
@@ -29,7 +30,7 @@ function City(){
                 <input type="text" className="citySearch" onChange={HandleCity} value={city} placeholder="Enter City Name" name="city" autocomplete="off"/>
                 <button type="submit" className="searchButton" onClick={()=>setSubmitted(true)}>Submit</button>
             </div>
-                {submitted ? (<DataServer city={city} />) : null}
+                {submitted ? <DataServer city={city} /> : null}
         </div>
     )
 }
