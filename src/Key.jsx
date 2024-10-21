@@ -1,3 +1,3 @@
 
-const key=process.env.WEATHER_APP_API_KEY
+const key=process.env.REACT_APP_WEATHER_API_KEY
 export default key;
