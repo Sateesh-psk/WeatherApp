@@ -29,6 +29,10 @@ function City(){
             <div className="page1">
                 <input type="text" className="citySearch" onChange={HandleCity} value={city} placeholder="Enter City Name" name="city" autocomplete="off"/>
                 <button type="submit" className="searchButton" onClick={()=>setSubmitted(true)}>Submit</button>
+                <h2 style={{color:'whitesmoke', letterSpacing:'3px', opacity:'0.9', wordSpacing:'5px'}}>
+                    {submitted ? "scroll down for details" : "please enter the city name"}
+
+                </h2>
             </div>
             {submitted ? (<DataServer city={city} />) : null}
         </div>

@@ -4,7 +4,10 @@ function Condition(props){
     return (
         <div class="temper anime">
             <img style={{float:'left',width:'25%'}} src={props.icon} alt="" />
-            <h1 style={{display:'inline-block',marginTop:'1.5em'}}>{props.text}</h1>
+            {
+                props.text.length>15 ? <h2 style={{marginTop:'1.5em', color:"navy"}}>{props.text}</h2> : <h1 style={{marginTop:'1.5em', color:"navy", height:'2em'}}>{props.text}</h1>
+
+            }
         </div>
     )
 }

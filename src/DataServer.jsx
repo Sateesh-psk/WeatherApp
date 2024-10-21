@@ -5,14 +5,13 @@ import Keys from "./Key";
 
 function Data(props){
     const [weather,setWeather]=useState();
-    let status=200
+    let status="200"
     const key="https://api.weatherapi.com/v1/forecast.json?key="+Keys+"&q="+props.city+"&days=1&aqi=yes&alerts=no";
     useEffect(()=>{
         axios.get(key)
         .then(res=>{
-                    {res.data && (status=res.status)}
-                    setWeather(res.data)
-                }
+                setWeather(res.data)
+            }
         )
         .catch(error => {
                 console.error(error);

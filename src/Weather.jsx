@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Temper from "./Temperature";
 import image from "./original.jpeg"
 import Condition from "./Condition";
@@ -9,10 +9,8 @@ import CityDetails from "./CityDetails";
 
 import Astro from "./astro";
 function Input({data}){
-    const weather=data;
     const {current,location,forecast}=data;
     const today=forecast.forecastday[0];
-    const index=current.air_quality.gb
     const image_con={
         width: "100%",
         height:'720px',
@@ -23,6 +21,9 @@ function Input({data}){
     return (
         <div>
         <div style={image_con}>
+            <CityDetails details={location} />
+        </div>
+        <div style={image_con}>
             <br />
             <h1 style={{color:'navy'}}><center>Current Weather Details</center></h1>
             <Temper value="Temperature" valuec={current.temp_c} c='°C' valuef={current.temp_f} f="°F"/>
@@ -32,7 +33,7 @@ function Input({data}){
             <Temper value="Pressure" valuec={current.pressure_mb} c='millibar' valuef={current.pressure_in} f="inches"/>
             <Temper value="Precipitation" valuec={current.precip_mm} c='millimeter' valuef={current.precip_in} f="inches"/>
             <Temper value="Feelslike" valuec={current.feelslike_c} c='°C' valuef={current.feelslike_f} f="°F"/>
-            <div className="index">
+            <div className="index anime">
                 <UV uv={current.uv} />
             </div>
         </div>
@@ -48,13 +49,9 @@ function Input({data}){
             <Temper value="Total Precipitation" valuec={today.day.totalprecip_mm} c='millimeter' valuef={today.day.totalprecip_in} f="inches"/>
             <div>
                 {today.hour.map((obj,index)=>{
-                    if(index%2===0)
-                    return (<Hour data={obj} />)
+                    if(index%2===0) return (<Hour data={obj} />)
                 })}
             </div>
-        </div>
-        <div style={image_con}>
-            <CityDetails details={location} />
         </div>
         </div>
     )
