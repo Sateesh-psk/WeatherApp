@@ -1,9 +1,9 @@
 import React from "react";
-import sun from "./sunny.png";
-import moon from "./moony.png";
+import sun from "../../assets/images/sunny.png";
+import moon from "../../assets/images/moony.png"
 
 function hour(hour){
-    let [date,time]=hour.data.time.split(" ")
+    let [,time]=hour.data.time.split(" ")
     function day(){
         if(hour.data.is_day)
             return  <img src={sun} alt="" />

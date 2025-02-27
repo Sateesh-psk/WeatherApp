@@ -1,5 +1,4 @@
-import './App.css';
-import City from "./City";
+import City from "./components/city/City";
 import "./index.css"
 function App() {
   return (

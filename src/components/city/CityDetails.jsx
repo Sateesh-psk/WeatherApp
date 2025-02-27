@@ -1,6 +1,6 @@
 import React from "react";
-import Region from "./Region";
-import Latitude from "./Latitude";
+import Region from "../weather/Region";
+import Latitude from "../weather/Latitude";
 function Details(props){
     const location=props.details;
     return (

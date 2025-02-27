@@ -1,11 +1,11 @@
 import React from "react";
 import Temper from "./Temperature";
-import image from "./original.jpeg"
+import image from "../../assets/images/original.jpeg"
 import Condition from "./Condition";
 import AirQuality from "./AirQuality";
 import Hour from "./HourForecast";
 import UV from "./UV";
-import CityDetails from "./CityDetails";
+import CityDetails from "../city/CityDetails";
 
 import Astro from "./astro";
 function Input({data}){
@@ -48,9 +48,13 @@ function Input({data}){
             <Temper value="Max Wind Speed" valuec={today.day.maxwind_mph} c='miles/h' valuef={today.day.maxwind_kph} f="KMeter/h"/>
             <Temper value="Total Precipitation" valuec={today.day.totalprecip_mm} c='millimeter' valuef={today.day.totalprecip_in} f="inches"/>
             <div>
-                {today.hour.map((obj,index)=>{
+                {/* {today.hour.map((obj,index)=>{
                     if(index%2===0) return (<Hour data={obj} />)
-                })}
+                })} */}
+                {today.hour.filter((_, index) => index % 2 === 0).map((obj) => (
+                    <Hour key={obj.time} data={obj} />
+                ))}
+
             </div>
         </div>
         </div>

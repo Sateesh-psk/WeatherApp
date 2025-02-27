@@ -5,7 +5,7 @@ function Region(props){
     return(
         <div className="region">
             <h2>{props.area}</h2>
-            <a className="location" target="_blank" href={key}><h1>{props.value}</h1></a>
+            <a className="location" rel="noreferrer" target="_blank" href={key}><h1>{props.value}</h1></a>
         </div>
     )
 }

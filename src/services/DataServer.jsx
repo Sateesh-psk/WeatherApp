@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
-import Weather from "./Weather";
+import Weather from "../components/weather/Weather";
 import Keys from "./Key";
 
 function Data(props){
@@ -16,7 +16,7 @@ function Data(props){
         .catch(error => {
                 console.error(error);
             });
-        },[])
+        },[key])
     return (
         <div>
             {weather && <Weather data={weather} status={status}/>}
@@ -25,24 +25,3 @@ function Data(props){
     )
 }
 export default Data;
-
-
-
-
-
-
-// import 'katex/dist/katex.min.css';
-// import { BlockMath } from 'react-katex';
-
-// function getCardinalDirection(angle) {
-//     const directions = ['↑', '↗', '→', '↘', '↓', '↙', '←', '↖'];
-//     return directions[Math.round(angle / 45) % 8];
-// }
-
-
-
-
-
-// <div style={{fontSize:'300%'}}>
-        //     <BlockMath math='{\\\searrow\\}' />
-        // </div>
